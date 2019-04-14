@@ -3,20 +3,31 @@
 	console.log("fired");
 
 
- 	const clickbio = document.querySelector('#click');
- 		  clickbio1 = document.querySelector('#click1');
-		  lightBox = document.querySelector('.lightbox');
-		  lightBox1 = document.querySelector('.lightbox1')
+ 	const clickbio = document.querySelector('#click'),
+ 		  clickbio1 = document.querySelector('#click1'),
+ 		  playVideo = document.querySelector('#play'),
+		  lightBox = document.querySelector('.lightbox'),
+		  lightBox1 = document.querySelector('.lightbox1'),
+		  picture = document.querySelector('.pictures')
+		  video = document.querySelector('video'),
+		  closeLB = document.querySelector('.lightbox-close');
 		  
 		  var button = document.querySelector("#button");
 		  var burgerCon = document.querySelector("#burgerCon");
 
 		  let logo = document.querySelector('.logo');
 
+		  let lightboxControls = document.querySelectorAll('.open-lightbox');
+
 
 	function animImage() {
+		const offSet = 600;
+
 		TweenMax.to(logo, 0.7, {scaleX: 1.025, scaleY: 1.025, rotation: 360, ease:Elastic.easeInOut});
+
+		 picture.style.right = totalOffset;
 	}
+
 
 
 	function hamburgerMenu() {
@@ -25,36 +36,27 @@
 	}
 
 
-	function showLightbox() {
+	function showLightbox(e) {
+		e.preventDefault();
 
 		hideLightbox ();
+		this.nextElementSibling.classList.add('display');
 
- 
-		lightBox.classList.add('display');
- 
 	}
 
-	function showLightbox1() {
-
-		hideLightbox ();
-
- 
-		lightBox1.classList.add('display');
- 
-	}
-
- 
 	function hideLightbox() {
-
-		// lightBox1.classList.remove('display');
-		lightBox.classList.remove('display');
+		document.querySelectorAll('.lightbox').forEach(lightbox => lightbox.classList.remove('display'));
  
 	}
 
 	logo.addEventListener('mouseover', animImage);
 	button.addEventListener("click", hamburgerMenu, false);
-	clickbio.addEventListener('click', showLightbox);
-	clickbio1.addEventListener('click', showLightbox1);
+	// video.addEventListener('ended', closeLightbox);
+	// closeLB.addEventListener('click', closeLightbox);
+
+	if (lightboxControls) {
+		lightboxControls.forEach(button => button.addEventListener("click", showLightbox));
+	}
 		
 })();
 

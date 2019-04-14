@@ -47,11 +47,7 @@
 		</header>
 
       <div id="about">
-      <section class="container">
-       <!--  <div id="heroImage1">
-        <h2>THAMES RIVERS ANGLERS ASSOCIATION</h2>
-        </div> -->
-      </section>
+      <section class="container"></section>
     </div>
 
       <section id="about1">
@@ -70,7 +66,14 @@
     </section>
 
      <section class="video">
-      <div class="container"><h2>Video Container</h2></div>
+      <h2 class="hidden">TRAA VIDEO</h2>
+      <a id="play" class="open-lightbox" href="#">Watch Video</a>
+      <section class="lightbox3">
+        <span class="lightbox-close">X</span>
+        <video src="video/tablet.mp4" muted controls class="hidden tablet"></video>
+        <video src="video/mobile.mp4" muted controls class="mobile"></video>
+        <!-- <a id="play" class="open-lightbox" href="#">Watch Video</a> -->
+      </section>
      </section>
 
     <section class="hidden textArea">
@@ -92,12 +95,12 @@
     <div id="textArea2">
       <div id="special">
         <p>Memberships are Due</p>
-        <a id="apply" href="#">Subscribe</a>
+        <a id="apply" class="open-lightbox" href="#">Subscribe</a>
       </div>
 
       <div id="special1">
         <p>Fundraising</p>
-        <a id="donation" href="#">Donation</a>
+        <a id="donation" class="open-lightbox" href="#">Donation</a>
       </div>
     </div>
 
@@ -111,17 +114,16 @@
           <a href="#" id="backBut">BACK TO TOP^</a>
            <ul id="footerNav">
               <li><a href="index.html">Home</a></li>
-              <li><a href="#">Newsletter</a></li>
+              <li><a href="newsletter.html">Newsletter</a></li>
               <li><a href="contact.html">Contact</a></li>
-              <li><a href="#">Events</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Links</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="links.html">Links</a></li>
               <li><a href="gallery.html">Gallery</a></li>
             </ul>
         </nav>
-        <div id="copyright">
-        <p>&copy; 2019 TRAA</p>
-      </div>
+        <div class="copyright">
+          <p>&copy; 2019 TRAA</p>
+        </div>
       </div>
     </footer>
     
