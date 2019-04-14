@@ -8,7 +8,6 @@
  		  playVideo = document.querySelector('#play'),
 		  lightBox = document.querySelector('.lightbox'),
 		  lightBox1 = document.querySelector('.lightbox1'),
-		  lightbox3 = document.querySelector('.lightbox3'),
 		  picture = document.querySelector('.pictures')
 		  video = document.querySelector('video'),
 		  closeLB = document.querySelector('.lightbox-close');
@@ -17,6 +16,8 @@
 		  var burgerCon = document.querySelector("#burgerCon");
 
 		  let logo = document.querySelector('.logo');
+
+		  let lightboxControls = document.querySelectorAll('.open-lightbox');
 
 
 	function animImage() {
@@ -35,48 +36,27 @@
 	}
 
 
-	function showLightbox() {
+	function showLightbox(e) {
+		e.preventDefault();
 
 		hideLightbox ();
+		this.nextElementSibling.classList.add('display');
 
- 
-		lightBox.classList.add('display');
- 
 	}
 
-	function showLightbox1() {
-
-		hideLightbox ();
-
- 
-		lightBox1.classList.add('display');
- 
-	}
-
-	function showLightbox3() {
-
-		hideLightbox ();
-
- 
-		lightBox3.classList.add('display');
- 
-	}
-
- 
 	function hideLightbox() {
-
-		// lightBox1.classList.remove('display');
-		lightBox.classList.remove('display');
+		document.querySelectorAll('.lightbox').forEach(lightbox => lightbox.classList.remove('display'));
  
 	}
 
 	logo.addEventListener('mouseover', animImage);
 	button.addEventListener("click", hamburgerMenu, false);
-	clickbio.addEventListener('click', showLightbox);
-	clickbio1.addEventListener('click', showLightbox1);
-	playVideo.addEventListener('click', showLightbox3);
-	video.addEventListener('ended', closeLightbox);
-	closeLB.addEventListener('click', closeLightbox);
+	// video.addEventListener('ended', closeLightbox);
+	// closeLB.addEventListener('click', closeLightbox);
+
+	if (lightboxControls) {
+		lightboxControls.forEach(button => button.addEventListener("click", showLightbox));
+	}
 		
 })();
 
