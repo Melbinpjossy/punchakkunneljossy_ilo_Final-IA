@@ -353,6 +353,7 @@ p
 
 #footerCon nav {
   grid-column: 1/-1;
+  margin-bottom: 40px;
 }
 
 #footerNav 
@@ -621,6 +622,20 @@ p
   margin-left: 20px;
 }
 
+ .text2 p {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  padding-right: 40px;
+  }
+
+  .text p {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  padding-right: 40px;
+  }
+
 
 #button
 {
@@ -712,6 +727,7 @@ p
   font-size: 14px;
   margin-bottom: 5px;
   font-weight: bold;
+  padding-right: 40px;
 }
 
   .text4 {
@@ -735,6 +751,7 @@ p
   font-size: 14px;
   margin-bottom: 5px;
   font-weight: bold;
+  padding-right: 40px;
 }
 
   .heroImage h2
@@ -754,6 +771,11 @@ p
   line-height: 32px;
   margin-bottom: 30px;
   font-weight: bold;
+}
+
+#content1 {
+  margin-left: 40px;
+  padding-left: 20px;
 }
 
 
@@ -804,7 +826,7 @@ input, textarea
 
 #comment
 {
-  margin: center;
+ /* margin: center;*/
   width: 200px;
   height: 150px;
 }
@@ -892,7 +914,7 @@ iframe
 
 #comment
 {
-  margin: center;
+  /*margin: center;*/
   width: 350px;
   height: 150px;
 }
@@ -1250,14 +1272,7 @@ iframe
   display: none;
 }
 
-/*.lightbox-close {
-  position: relative;
-  color: white;
-  right: 12px;
-  top: 12px;
-  cursor: pointer;
-  font-size: 2em;
-}*/
+/**/
 
 .display {
   display: block;
@@ -1304,6 +1319,13 @@ iframe
   }
 
 
+}
+
+@media screen and (min-width: 960px) {
+  #deets {
+    margin-left: 40px;
+    padding-left: 20px;
+  }
 }
 
 
@@ -1497,7 +1519,12 @@ iframe
   height: 300px;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 20px;
+  margin-left: 40px;
+  padding-left: 40px;
+}
+
+#about1 {
+  padding-right: 20px;
 }
 
   #about1 ul li{
@@ -1506,6 +1533,14 @@ iframe
   font-family: 'Habibi', serif;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+#about3 {
+  margin-top: 40px;
+}
+
+#about3 img {
+  margin-bottom: 40px;
 }
 
 
@@ -1724,7 +1759,8 @@ iframe
   height: 300px;
   margin-top: 20px;
   margin-bottom: 40px;
-  margin-left: 20px;
+  margin-left: 40px;
+  padding-left: 20px;
 }
 
   #box1 {
